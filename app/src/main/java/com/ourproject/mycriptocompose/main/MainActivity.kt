@@ -1,4 +1,4 @@
-package com.ourproject.mycriptocompose
+package com.ourproject.mycriptocompose.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.ourproject.mycriptocompose.ui.theme.MyCriptoComposeTheme
+import com.ourproject.mycriptocompose.main.navigation.MainAppNavHost
+import com.ourproject.mycriptocompose.ui.components.theme.MyCriptoComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,25 +23,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                   MainAppNavHost()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyCriptoComposeTheme {
-        Greeting("Android")
     }
 }
