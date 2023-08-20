@@ -1,4 +1,4 @@
-package com.ourproject.mycriptocompose.ui.theme
+package com.ourproject.mycriptocompose.ui.components.theme
 
 import android.app.Activity
 import android.os.Build
